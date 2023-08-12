@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@200&display=swap" rel="stylesheet">  
     <link href="https://fonts.googleapis.com/css2?family=Slackside+One&display=swap" rel="stylesheet">
 
     <style>
@@ -18,15 +20,33 @@
 
         .product-card {
             border: 1px solid #ccc;
-            padding: 20px;
-            margin: 10px;
+            padding: 2px;
+            margin: 1px;
             text-align: center;
         }
-
+		
+	
+		.col-6 {
+			margin:0;
+			padding:0;
+		}
+		
+		.swiper-slide img {
+			margin-bottom: 1.5em;
+		}
+		
         .product-title {
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 0.1em;
+			font-size:1.2em;
+			text-align: left;
+			font-family: 'Handjet', cursive;
         }
+		
+		.product-des {
+			text-align: left;
+			font-family: 'Handjet', cursive;
+		}
 
         .swiper-container {
             max-width: 200px; /* Adjust this to your design */
@@ -45,37 +65,32 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-6">
                 <div class="product-card">
-                    <h2 class="product-title">Product 1</h2>
-                    <div class="swiper-container">
+                    <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="img/Aj3reimaged.png" alt="Product 1 Image 1"></div>
-                            <div class="swiper-slide"><img src="img/sail-obsidian-university-blue-right.png" alt="Product 1 Image 2"></div>
-                            <div class="swiper-slide"><img src="img/Aj3reimaged.png" alt="Product 1 Image 3"></div>
+                            <div class="swiper-slide slide_1"><img src="img/Aj3reimaged.png" alt="Product 1 Image 1"></div>
+                            <div class="swiper-slide slide_2"><img src="img/sail-obsidian-university-blue-right.png" alt="Product 1 Image 2"></div>
+                            <div class="swiper-slide slide_3"><img src="img/Aj3reimaged.png" alt="Product 1 Image 3"></div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <button class="btn btn-primary">Buy Now</button>
+					<h3 class="product-title">Air Jordan I Black / Red Banned</h3>
+					<h4 class="product-des">Jordan 1</h4>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-6">
                 <div class="product-card">
-                    <h2 class="product-title">Product 2</h2>
-                    <div class="swiper-container">
+                    <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="img/sail-obsidian-university-blue-right.png" alt="Product 2 Image 1"></div>
                             <div class="swiper-slide"><img src="img/Aj3reimaged.png" alt="Product 2 Image 2"></div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
                     </div>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                    <button class="btn btn-primary">Buy Now</button>
+                    <h3 class="product-title">Air Jordan I Black / Red Banned</h3>
+                    <h4 class="product-des">Jordan 1</h4>
                 </div>
             </div>
+			
             <!-- Add more product cards as needed -->
         </div>
     </div>
@@ -84,14 +99,16 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var swipers = new Swiper('.swiper-container', {
+            var swipers = new Swiper('.mySwiper', {
 				slidesPerView: 1,
+				loop: true,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
             });
         });
+		
     </script>	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 	
