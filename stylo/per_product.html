@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Page with Lightbox</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="product-details">
+        <div id="lightbox" class="lightbox">
+        <span class="close-button" id="close-button">&times;</span>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
+        <div class="product-info">
+            <h1 class="product-title">New Balance 580</h1>
+            <p class="product-price">$120.00</p>
+            <p class="product-description">The New Balance 580 offers a classic design with modern comfort.</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+    <section class="product-images">
+        <div class="image">
+            <img src="img/Aj3reimaged.png" alt="Image 1" data-src="img/Aj3reimaged.png">
+        </div>
+        <div class="image">
+            <img src="img/Aj1Lost&found.png" alt="Image 2" data-src="img/Aj1Lost&found.png">
+        </div>
+        <div class="image">
+            <img src="img/sail-obsidian-university-blue-right.png" alt="Image 3" data-src="img/sail-obsidian-university-blue-right.png">
+        </div>
+    </section>
+    <section class="product-video">
+        <!-- ... Rest of the product video section ... -->
+    </section>
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+  
+    <script>
+        const images = document.querySelectorAll('.image img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxContent = document.getElementById('lightbox-content');
+        const closeButton = document.getElementById('close-button');
+
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const largeSrc = this.getAttribute('data-src');
+                lightboxContent.innerHTML = `<img src="${largeSrc}" alt="Large Image">`;
+                lightbox.style.display = 'block';
+            });
+        });
+
+        closeButton.addEventListener('click', function() {
+            lightbox.style.display = 'none';
+            lightboxContent.innerHTML = '';
+        });
+    </script>
+	
+</body>
+</html>

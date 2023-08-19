@@ -1,0 +1,4 @@
+Things to Do 
+
+
+\Keep in mind that this is a simplified example, and there are more sophisticated libraries and plugins available for creating image galleries and lightboxes, like Fancybox, Lightbox2, or other custom solutions.
